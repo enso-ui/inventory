@@ -3,19 +3,16 @@
         <div class="column is-half-desktop is-full-touch">
             <enso-form class="box has-background-light raises-on-hover"/>
             <accessories>
-                <template slot-scope="{ count }">
-                    <tab keep-alive
-                         id="Addresses">
-                        <div class="columns is-centered">
-                            <div class="column">
-                                <ro-addresses :id="warehouseId"
-                                    type="LaravelEnso\Inventory\App\Models\Warehouse"
-                                    @update="$set(count, 'Addresses', $refs.addresses.count)"
-                                    ref="addresses"/>
-                            </div>
+                <tab keep-alive
+                     id="Address">
+                    <div class="columns is-centered">
+                        <div class="column">
+                            <ro-addresses :id="$route.params.warehouse"
+                                type="LaravelEnso\Inventory\App\Models\Warehouse"
+                                ref="addresses"/>
                         </div>
-                    </tab>
-                </template>
+                    </div>
+                </tab>
             </accessories>
         </div>
     </div>
@@ -28,11 +25,5 @@ import { EnsoForm } from '@enso-ui/forms/bulma';
 
 export default {
     components: { Accessories, RoAddresses, EnsoForm, Tab },
-
-    computed: {
-        warehouseId() {
-            return Number.parseInt(this.$route.params.warehouse, 10);
-        },
-    },
 };
 </script>
