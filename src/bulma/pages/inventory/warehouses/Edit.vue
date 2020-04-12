@@ -2,14 +2,28 @@
     <div class="columns is-centered">
         <div class="column is-half-desktop is-full-touch">
             <enso-form class="box has-background-light raises-on-hover"/>
+            <accessories>
+                <tab keep-alive
+                     id="Address">
+                    <div class="columns is-centered">
+                        <div class="column">
+                            <ro-addresses :id="$route.params.warehouse"
+                                type="LaravelEnso\Inventory\App\Models\Warehouse"
+                                ref="addresses"/>
+                        </div>
+                    </div>
+                </tab>
+            </accessories>
         </div>
     </div>
 </template>
 
 <script>
+import { Tab } from '@enso-ui/tabs/bulma';
+import { Accessories, RoAddresses } from '@enso-ui/accessories/bulma';
 import { EnsoForm } from '@enso-ui/forms/bulma';
 
 export default {
-    components: { EnsoForm },
+    components: { Accessories, RoAddresses, EnsoForm, Tab },
 };
 </script>
