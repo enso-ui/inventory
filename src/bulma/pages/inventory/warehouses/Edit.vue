@@ -7,8 +7,8 @@
                      id="Address">
                     <div class="columns is-centered">
                         <div class="column">
-                            <ro-addresses :id="$route.params.warehouse"
-                                type="LaravelEnso\Inventory\App\Models\Warehouse"
+                            <addresses :id="$route.params.warehouse"
+                                type="warehouse"
                                 ref="addresses"/>
                         </div>
                     </div>
@@ -20,10 +20,10 @@
 
 <script>
 import { Tab } from '@enso-ui/tabs/bulma';
-import { Accessories, RoAddresses } from '@enso-ui/accessories/bulma';
+import { Accessories, Addresses } from '@enso-ui/accessories/bulma';
 import { EnsoForm } from '@enso-ui/forms/bulma';
 
 export default {
-    components: { Accessories, RoAddresses, EnsoForm, Tab },
+    components: { Accessories, Addresses, EnsoForm, Tab },
 };
 </script>
