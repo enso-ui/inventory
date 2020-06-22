@@ -46,7 +46,7 @@
 </template>
 
 <script>
-import Errors from '@enso-ui/forms/src/classes/Errors';
+import Errors from '@enso-ui/laravel-validation';
 import { selectOnFocus } from '@enso-ui/directives';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faCheck, faBan, faTimes } from '@fortawesome/free-solid-svg-icons';
@@ -120,7 +120,7 @@ export default {
                     }
 
                     this.line.id = data.id;
-                }).catch((error) => {
+                }).catch(error => {
                     this.loading = false;
 
                     const { status, data } = error.response;
