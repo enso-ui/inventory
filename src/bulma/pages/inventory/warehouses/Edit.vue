@@ -20,7 +20,7 @@
 
 <script>
 import { Tab } from '@enso-ui/tabs/bulma';
-import { Accessories, Addresses } from '@enso-ui/accessories/bulma';
+import { Accessories, Addresses } from '@enso-ui/bulma';
 import { EnsoForm } from '@enso-ui/forms/bulma';
 
 export default {
