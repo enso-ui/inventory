@@ -25,8 +25,7 @@
                 </figure>
             </template>
         </enso-table>
-        <modal show
-            v-if="productId"
+        <modal v-if="productId"
             @keyup.esc="close"
             @close="close">
             <positions-manager :product-id="productId"/>
